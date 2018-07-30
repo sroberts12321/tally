@@ -16,7 +16,9 @@ class GameScreen extends Component {
     render() {
         return(
             <div>
-                <button onClick = {this.props.onDecrementScore} className="buttons"> - </button><h1 className="buttons">{this.props.score}</h1><button onClick = {this.props.onIncrementScore} className="buttons"> + </button>
+                <button onClick = {this.props.onDecrementScore} className="buttons"> - </button>
+                <h1 className="buttons">{this.props.score}</h1>
+                <button onClick = {this.props.onIncrementScore} className="buttons"> + </button>
             </div>
         )
     }

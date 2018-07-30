@@ -1,5 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
+let minus = require("../minus.png")
+let plus = require("../plus.png")
+
 
 class Home extends Component {
     constructor(props){
@@ -15,15 +18,17 @@ class Home extends Component {
 
     render() {
         return(
-            <div>
-                <div>
-                    <button onClick = {this.props.onDecrementPlayerOneScore} className="buttons"> - </button><h1>{this.props.player_one_score}</h1><button onClick = {this.props.onIncrementPlayerOneScore}> + </button>
+            <div className="pingpong">
+                <div className="add button">
+                    <img alt="" src={plus}/>
                 </div>
-                <div>
-                    <button onClick = {this.props.onDecrementPlayerTwoScore} className="buttons"> - </button><h1>{this.props.player_two_score}</h1><button onClick = {this.props.onIncrementPlayerTwoScore}> + </button>
+
+                <h1>{this.props.player_one_score}</h1>
+
+                <div className="minus button">
+                    <img alt="" src={minus}/>
                 </div>
             </div>
-
         )
     }
 }
@@ -45,3 +50,20 @@ const mapDispatchToProps = (dispatch) =>{
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
+
+
+
+{/* <div>
+<button onClick = {this.props.onDecrementPlayerOneScore} className="buttons"> - </button>
+    <div className="scoreValue">
+        <h1>{this.props.player_one_score}</h1>
+    </div>
+<button onClick = {this.props.onIncrementPlayerOneScore}> + </button>
+</div>
+<div>
+<button onClick = {this.props.onDecrementPlayerTwoScore} className="buttons"> - </button>
+    <div className="scoreValue">
+        <h1>{this.props.player_two_score}</h1>
+    </div>
+<button onClick = {this.props.onIncrementPlayerTwoScore}> + </button>
+</div> */}

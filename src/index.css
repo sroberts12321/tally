@@ -7,3 +7,18 @@ body {
 .buttons {
   display:inline;
 }
+
+button {
+  display:inline;
+  widows: 25%;
+  font-size:10em;
+}
+
+.scoreValue {
+  display:inline;
+  padding: 3em;
+}
+
+h1 {
+  display: inline;
+}
